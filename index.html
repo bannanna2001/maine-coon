@@ -4,11 +4,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Мейн-ку́н</title>
 </head>
 
 <body>
 
+    <div style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <symbol id="icon-crown" viewbox="0 0 49 23">
+                <path d="M41.8399 22H6.99989C6.66144 22 6.3606 21.7851 6.25095 21.4657L1.0428 6.29874C0.901441 5.88527 1.12164 5.43605 1.5353 5.294C1.66216 5.25103 1.79446 5.24017 1.91725 5.26189C2.20359 5.27862 2.47046 5.45143 2.59415 5.73191C3.23797 7.19174 5.52829 11.9047 8.2001 11.9047C8.23318 11.9047 8.2667 11.9038 8.30068 11.9019C9.91229 11.8305 12.4328 9.97344 15.2885 1.53743C15.3977 1.21624 15.699 1 16.0384 1C16.3782 1 16.6795 1.21624 16.7887 1.53743C17.7637 4.41412 21.0318 11.8581 24.4253 11.8581C24.4344 11.8581 24.443 11.8576 24.4525 11.8576C26.0614 11.8382 28.5352 10.0354 31.1844 1.55507C31.2881 1.22438 31.594 1 31.9406 1H31.9483C32.298 1.00362 32.6039 1.23524 32.7008 1.57045C33.5105 4.35441 36.3821 11.6463 39.9043 11.9508C41.9622 12.12 44.2439 9.79475 46.4967 5.20172C46.6797 4.82669 47.1246 4.65796 47.5111 4.81855C47.8967 4.97824 48.0924 5.40981 47.9574 5.8052L42.5893 21.4657C42.4792 21.7856 42.1783 22 41.8399 22ZM7.56534 20.4189H41.2736L44.3758 11.3686C42.8765 12.9528 41.3542 13.6594 39.7666 13.5264C35.8656 13.1876 33.1888 7.57491 31.9442 4.27569C29.7458 10.4027 27.2915 13.4052 24.4706 13.4382C24.4552 13.4382 24.4407 13.4391 24.4253 13.4391C20.4831 13.4391 17.4398 7.40482 16.061 4.07619C13.7086 10.2743 11.1841 13.3559 8.37091 13.4817C6.92876 13.5373 5.67282 12.8198 4.59132 11.7554L7.56534 20.4189Z"></path>
+            </symbol>
+            <symbol id="social--facebook" viewBox="0 0 6 12">
+                <path d="M1.09903 2.72854C1.09903 3.00311 1.09903 4.22865 1.09903 4.22865H0V6.06299H1.09903V11.514H3.35667V6.06314H4.87165C4.87165 6.06314 5.01353 5.18359 5.08231 4.22189C4.88513 4.22189 3.36521 4.22189 3.36521 4.22189C3.36521 4.22189 3.36521 3.15472 3.36521 2.96767C3.36521 2.78022 3.61136 2.52806 3.85465 2.52806C4.09748 2.52806 4.60999 2.52806 5.08469 2.52806C5.08469 2.27831 5.08469 1.41538 5.08469 0.618408C4.45099 0.618408 3.73004 0.618408 3.41225 0.618408C1.04322 0.618282 1.09903 2.45445 1.09903 2.72854Z"/>
+            </symbol>
+            <symbol id="social--twitter" viewBox="0 0 16 11">
+                <path d="M13.3758 4.62011C14.2231 4.55022 14.7977 4.16506 15.0189 3.64245C14.7133 3.83019 13.7646 4.03487 13.2407 3.83994C13.215 3.71684 13.1863 3.59991 13.1581 3.49434C12.7589 2.02841 11.392 0.847405 9.9598 0.990077C10.0757 0.943291 10.1932 0.899732 10.3104 0.860627C10.468 0.804161 11.393 0.653668 11.2473 0.327185C11.1246 0.040017 9.99448 0.544209 9.7817 0.610109C10.0626 0.504473 10.5271 0.322766 10.5769 0C10.1466 0.0590258 9.72411 0.262477 9.3977 0.558308C9.51554 0.431453 9.60494 0.276857 9.62391 0.110476C8.47615 0.843722 7.80569 2.322 7.26309 3.75598C6.83704 3.34308 6.45942 3.01793 6.12066 2.83738C5.17032 2.32775 4.03403 1.79603 2.25031 1.13387C2.19557 1.72402 2.54218 2.50872 3.54095 3.03055C3.32456 3.00159 2.92885 3.06622 2.61236 3.14201C2.74125 3.81809 3.16218 4.3751 4.30173 4.64445C3.78095 4.67882 3.51181 4.79733 3.26789 5.05276C3.50508 5.52297 4.08387 6.07637 5.12504 5.96277C3.96746 6.4617 4.65305 7.38567 5.59497 7.24787C3.98812 8.90757 1.45474 8.78559 0 7.39742C3.79824 12.573 12.0547 10.4583 13.2852 5.47317C14.207 5.48102 14.749 5.15384 15.085 4.79312C14.5539 4.88326 13.784 4.79011 13.3758 4.62011Z"/>
+            </symbol>
+            <symbol id="social--vk" viewBox="0 0 13 8">
+                <path d="M12.8841 7.1355C12.8492 7.0724 12.633 6.56585 11.593 5.52472C10.5041 4.43452 10.6504 4.61154 11.9619 2.72647C12.7606 1.57842 13.08 0.877323 12.98 0.577604C12.8849 0.291906 12.2975 0.367274 12.2975 0.367274L10.3441 0.379543C10.3441 0.379543 10.1994 0.35851 10.0914 0.427744C9.98654 0.496101 9.9191 0.653848 9.9191 0.653848C9.9191 0.653848 9.60951 1.54249 9.19673 2.29792C8.32648 3.89204 7.97789 3.97617 7.83569 3.87714C7.50498 3.64666 7.58786 2.94994 7.58786 2.45567C7.58786 0.910625 7.80482 0.266491 7.16452 0.0999807C6.95163 0.0447692 6.79562 0.00796159 6.25202 0.00182698C5.55484 -0.00606037 4.96411 0.00445609 4.63015 0.180607C4.4075 0.298041 4.23605 0.560076 4.34088 0.574975C4.47007 0.593378 4.76259 0.659983 4.91779 0.887839C5.11849 1.18142 5.11118 1.84221 5.11118 1.84221C5.11118 1.84221 5.22657 3.66068 4.84222 3.88678C4.57814 4.0419 4.21655 3.72553 3.44056 2.27864C3.04322 1.53811 2.74257 0.7187 2.74257 0.7187C2.74257 0.7187 2.68488 0.566211 2.58168 0.484708C2.45655 0.385678 2.28104 0.354129 2.28104 0.354129L0.423525 0.366398C0.423525 0.366398 0.144817 0.375162 0.0424345 0.505741C-0.0485722 0.622299 0.0351215 0.862424 0.0351215 0.862424C0.0351215 0.862424 1.4896 4.53179 3.13585 6.38182C4.6464 8.0776 6.3609 7.9663 6.3609 7.9663H7.13771C7.13771 7.9663 7.37254 7.93825 7.49198 7.79891C7.60249 7.67096 7.59843 7.43083 7.59843 7.43083C7.59843 7.43083 7.58299 6.30645 8.06727 6.14081C8.54425 5.97781 9.15692 7.22752 9.80615 7.70864C10.2969 8.07234 10.6699 7.99259 10.6699 7.99259L12.4063 7.9663C12.4063 7.9663 13.3148 7.90583 12.8841 7.1355Z"/>
+            </symbol>
+        </svg>
+    </div>
+
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__inner">
+                <a href="#no_scroll" class="logo header__logo" aria-label="Логотип питомника Мейн Кунов">
+                    <svg class="crown crown--header" width="55" height="25">
+                        <use xlink:href="#icon-crown" x="0" y="0"></use>
+                    </svg>
+                </a>
+                <ul class="social header__social">
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <span class="visually-hidden">ВКонтакте</span>
+                            <svg class="social__icon social__icon--vk" width="15" height="15">
+                                <use xlink:href="#social--vk" x="0" y="0"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <span class="visually-hidden">Твиттер</span>
+                            <svg class="social__icon social__icon--twitter" width="15" height="15">
+                                <use xlink:href="#social--twitter" x="0" y="0"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="" class="social__link">
+                            <span class="visually-hidden">Фейсбук</span>
+                            <svg class="social__icon social__icon--facebook" width="15" height="15">
+                                <use xlink:href="#social--facebook" x="0" y="0"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="header__content">
+                    <p class="header__city">Новосибирск</p>
+                    <h1 class="header__title">Питомник Мейн-Кунов</h1>
+                    <p class="header__desc">Первый питомник с расширенным спектром услуг</p>
+                    <a href="#no_scroll" class="header__btn primary__btn" aria-label="Смотреть котиков">Смотреть котиков</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section section__pets">
+            <div class="section__wraper pets__wraper container">
+                <h2 class="section__title pets__title">Питомцы</h2>
+                <p class="section__desc pets__desc"> Все представители нашего питомника имеют ветеринарный паспорт с отметками о прививках и документ родословной </p>
+                <ul class="pets__list">
+                    <li class="pets__item">
+                        <a href="#" class="pets__tab pets__tab--active">Коты</a>
+                    </li>
+                    <li class="pets__item">
+                        <a href="#" class="pets__tab">Кошки</a>
+                    </li>
+                    <li class="pets__item">
+                        <a href="#" class="pets__tab">Котята</a>
+                    </li>
+                </ul>
+                <div class="pets__tab-content-wraper">
+                    <div class="pets__tab-content" id="pets__tab-content-1">
+                        <div class="galery pets__galery">
+                            <div class="galery__item">
+                                <picture>
+                                    <source type="image/webp" srcset="">
+                                    <img class="gallery__item-img" src="img/little-cat-1@3x.jpg" srcset="" width="518" height="382" alt="Мейн Кун">
+                                </picture>
+                            </div>
+                            <div class="galery__item galery__item--big">
+                                <picture>
+                                    <source type="image/webp" srcset="">
+                                    <img class="gallery__item-img" src="img/big-cat@3x.jpg" srcset="" width="518" height="382" alt="Мейн Кун">
+                                </picture>
+                            </div>
+
+                            <div class="galery__item">
+                                <picture>
+                                    <source type="image/webp" srcset="">
+                                    <img class="gallery__item-img" src="img/little-cat-2@3x.jpg" srcset="" width="518" height="382" alt="Мейн Кун">
+                                </picture>
+                            </div>
+                        </div>
+                        <!-- <button class="slider__btn slider__btn--prev">
+                            <span class="visually-hidden">Предыдущий слайд</span>
+                        </button>
+                        <button class="slider__btn slider__btn--next">
+                            <span class="visually-hidden">Следующий слайд</span>
+                        </button> -->
+                        <div class="pets__btn-wraper">
+                            <a href="#" class="pets__btn pets__btn primary__btn">Смотреть котиков</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section__features">
+            <div class="section__wraper features__wraper container">
+                <h2 class="section__title features__title">Особенности породы</h2>
+                <p class="section__desc features__desc">Мейн-Кун - это порода, которая вызывает к себе уважение. Приобретая в свой дом этого питомца, вы получите умное животное, которому нет равных</p>
+                <ul class="features__list">
+                    <li class="features__item">
+                        Легко уживается в семьях с детьми или другими животными
+                    </li>
+                    <li class="features__item">
+                        Выполняет команды как дрессированная собака
+                    </li>
+                    <li class="features__item">
+                        Вес может достигать 12 кг, а длина 1 м
+                    </li>
+                    <li class="features__item">
+                        Внешний вид этой кошки похож на дикую рысь
+                    </li>
+                </ul>
+                <div class="features__img">
+                    <picture>
+                        <source type="image/webp" srcset="img/cat@1x.webp 1x, img/cat@2x.webp 2x, img/cat@3x.webp 3x">
+                        <img src="img/cat@1x.png 1x" srcset="img/cat@2x.png 2x" alt="Изображение рыжего Мейн Куна" width="600" height="655">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section__advantages">
+            <div class="section__wraper advantages__wraper container">
+                <h2 class="section__title advantages__title">Почему именно мы?</h2>
+                <p class="section__desc advantages__desc">Приобретая животное в нашем питомнике, вы получите</p>
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <a href="" class="advantages__link">
+                            <span>Бесплатное ветеринарное обслуживание 5 лет</span>
+                        </a>
+                    </li>
+                    <li class="advantages__item">
+                        <a href="" class="advantages__link">
+                            <span>Консультирование по любому вопросу 24 часа в сутки</span>
+                        </a>
+                    </li>
+                    <li class="advantages__item">
+                        <a href="" class="advantages__link">
+                            <span>Индивидуальный подбор питания для вашего кота</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section__care">
+            <div class="section__wraper care__wraper container">
+                <h2 class="section__title care__title">Почему именно мы?</h2>
+                <ul class="care__list">
+                    <li class="care__item">
+                        <a href="" class="care__link">
+                            <h3 class="care__link-title">Шерсть</h3>
+                            <p class="care__link-content">Мы разработали 8 правил, следуя которым, шерсть вашего кота всегда будет блестящей, мягкой и послушной</p>
+                        </a>
+                    </li>
+                    <li class="care__item">
+                        <a href="" class="care__link">
+                            <h3 class="care__link-title">Когти</h3>
+                            <p class="care__link-content">Нужно ли стричь когти? Это мы и выясним, плюс ко всему расскажем как подобрать идеальную когтеточку</p>
+                        </a>
+                    </li>
+                    <li class="care__item">
+                        <a href="" class="care__link">
+                            <h3 class="care__link-title">Уши и глаза</h3>
+                            <p class="care__link-content">Владельцам котов необходимо регулярно осматривать ушки и глазасвоих питомцев, ведь это может быть признаками заболевания</p>
+                        </a>
+                    </li>
+                    <li class="care__item">
+                        <a href="" class="care__link">
+                            <h3 class="care__link-title">Питание</h3>
+                            <p class="care__link-content">В нашем питомнике существует два подхода: натуральное питание и питание промышленными кормами, но выбирать только вам</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section__teams">
+            <div class="section__wraper teams__wraper container">
+                <h2 class="section__title teams__title">Наша команда</h2>
+                <p class="section__desc teams__desc">Все сотрудники нашего питомника дипломированые специалисты в области фелинологии и ветеринарии</p>
+                <div class="teams__slider">
+                    <div class="teams__member-list">
+                        <div class="teams__member">
+                            <div class="member__photo"></div>
+                            <div class="member__content">
+                                <blockquote>
+                                    <cite>
+                                    <span class="member__name">Серёжа Попов</span>
+                                    <span class="member__job">Основатель питомника</span>
+                                </cite>
+                                    <p>Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет. Мы в ответе за каждого приобретенного вами питомца</p>
+                                </blockquote>
+                                <ul class="member__social">
+                                    <li class="social__item">
+                                        <a href="" class="social__link">
+                                            <span class="visually-hidden">Фейсбук</span>
+                                            <svg class="social__icon social__icon--facebook" width="15" height="15">
+                                            <use xlink:href="#social--facebook" x="0" y="0"></use>
+                                        </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="" class="social__link">
+                                            <span class="visually-hidden">Твиттер</span>
+                                            <svg class="social__icon social__icon--twitter" width="15" height="15">
+                                            <use xlink:href="#social--twitter" x="0" y="0"></use>
+                                        </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social__item">
+                                        <a href="" class="social__link">
+                                            <span class="visually-hidden">ВКонтакте</span>
+                                            <svg class="social__icon social__icon--vk" width="15" height="15">
+                                            <use xlink:href="#social--vk" x="0" y="0"></use>
+                                        </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="slider__button slider__button--prev">
+                        <span class="visually-hidden">Предыдущий сотрудник</span>
+                      </button>
+                    <button type="button" class="slider__button slider__button--next">
+                        <span class="visually-hidden">Следующий сотрудник</span>
+                      </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section__faq">
+            <div class="section__wraper teams__wraper container">
+                <h2 class="section__title teams__title">Вопрос-Ответ</h2>
+                <p class="section__desc teams__desc">Мы ответим на самые популярные ваши вопросы</p>
+                <ol class="faq__list">
+                    <li class="faq__item">
+                        <div class="faq__item-wraper">
+                            <button type="button" class="faq__question faq__active-btn">С какого возраста можно забирать котенка из питомника?</button>
+                            <div class="faq__answer faq__answer--show">
+                                <p>Есть важная причина, почему котенка стоит забирать домой только после трех месяцев, — это вакцинация. Первые прививки животному делают в возрасте 8 недель. Ревакцинация проводится через 3–4 недели. То есть котенок, покидающий
+                                    дом позднее 12 недель, максимально защищен от различных вирусов и инфекций.</p>
+
+                                <p>Так что, чтобы в дома появился психически и физически здоровый котенок, игривый, жизнерадостный, самостоятельный и воспитанный, не спешите забирать его от кошки-мамы раньше трех месяцев.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__item-wraper">
+                            <button type="button" class="faq__question">Как зарезервировать котенка?</button>
+                            <div class="faq__answer faq__answer--show">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, voluptatum sit! Suscipit neque animi cum ducimus nesciunt, numquam inventore doloremque, similique debitis, voluptatum molestiae sit quae nisi sunt molestias
+                                    accusamus.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__item-wraper">
+                            <button type="button" class="faq__question">Можно ли купить кота, если я живу в другом городе?</button>
+                            <div class="faq__answer faq__answer--show">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, voluptatum sit! Suscipit neque animi cum ducimus nesciunt, numquam inventore doloremque, similique debitis, voluptatum molestiae sit quae nisi sunt molestias
+                                    accusamus.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__item-wraper">
+                            <button type="button" class="faq__question">ККак подготовить дом к приему нового питомца?</button>
+                            <div class="faq__answer faq__answer--show">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, voluptatum sit! Suscipit neque animi cum ducimus nesciunt, numquam inventore doloremque, similique debitis, voluptatum molestiae sit quae nisi sunt molestias
+                                    accusamus.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section section__reviews">
+            <div class="section__wraper reviews__wraper container">
+                <h2 class="section__title reviews__title">Отзывы</h2>
+                <div class="reviews__slider">
+                    <ul class="reviews__list">
+                        <li class="reviews__item">
+                            <div class="reviews__item-photo"></div>
+                            <div class="reviews__item-content">
+                                <blockquote>
+                                    <cite>
+                                        <span class="reviews__item-name">Серёжа Попов</span>
+                                    </cite>
+                                    <p>Наш питомник занимается разведением Мейн-Кунов на протяжении 15 лет. Мы в ответе за каждого приобретенного вами питомца</p>
+                                </blockquote>
+
+                                <div class="reviews__content-wraper">
+                                    <time datetime="2018-05-24">24 мая 2018</time>
+                                    <ul class="member__social">
+                                        <li class="social__item">
+                                            <a href="" class="social__link">
+                                                <span class="visually-hidden">Твиттер</span>
+                                                <svg class="social__icon social__icon--twitter" width="15" height="15">
+                                                <use xlink:href="#social--twitter" x="0" y="0"></use>
+                                            </svg>
+                                            </a>
+                                        </li>
+                                        <li class="social__item">
+                                            <a href="" class="social__link">
+                                                <span class="visually-hidden">ВКонтакте</span>
+                                                <svg class="social__icon social__icon--vk" width="15" height="15">
+                                                <use xlink:href="#social--vk" x="0" y="0"></use>
+                                            </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="slider__button slider__button--prev">
+                        <span class="visually-hidden">Предыдущий сотрудник</span>
+                      </button>
+                    <button type="button" class="slider__button slider__button--next">
+                        <span class="visually-hidden">Следующий сотрудник</span>
+                      </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__wraper container">
+            <a href="#no_scroll" class="logo footer__logo" aria-label="Логотип питомника Мейн Кунов">
+                <svg class="crown crown--footer" width="55" height="25">
+                    <use xlink:href="#icon-crown" x="0" y="0"></use>
+                </svg>
+            </a>
+            <ul class="social footer__social">
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <span class="visually-hidden">Фейсбук</span>
+                        <svg class="social__icon social__icon--facebook" width="15" height="15">
+                            <use xlink:href="#social--facebook" x="0" y="0"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <span class="visually-hidden">Твиттер</span>
+                        <svg class="social__icon social__icon--twitter" width="15" height="15">
+                            <use xlink:href="#social--twitter" x="0" y="0"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="" class="social__link">
+                        <span class="visually-hidden">ВКонтакте</span>
+                        <svg class="social__icon social__icon--vk" width="15" height="15">
+                            <use xlink:href="#social--vk" x="0" y="0"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <a class="footer__link footer__link--address" href="">Новосибирск, Пушкинский проспект, 19</a>
+            <a class="footer__link footer__link--tel " href="tel:+73839006465 ">+7 (383) 900-64-65</a>
+        </div>
+    </footer>
 </body>
 
 </html>

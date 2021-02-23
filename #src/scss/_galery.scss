@@ -1,0 +1,10 @@
+.galery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 220px;
+    grid-gap: 30px;
+}
+
+.galery__item--big {
+    grid-row: span 2;
+}

@@ -1,0 +1,65 @@
+.header {
+    background-color: rgb(24, 22, 23);
+    background-image: url('../img/main-cat@2x.png');
+    background-size: 1000px 700px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.header__container {
+    padding-top: 45px;
+    padding-bottom: 64px;
+}
+
+.crown--header {
+    margin-bottom: 116px;
+}
+
+.header__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 0;
+    padding-right: 113px;
+    margin-top: auto;
+}
+
+.header__social::before {
+    content: '';
+    bottom: 127px;
+    left: 6px;
+    height: 77px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.61);
+    margin-bottom: 29px;
+}
+
+.header__city {
+    color: var(--gold-color);
+    margin-bottom: 18px;
+}
+
+.header__desc {
+    color: var(--gold-color);
+    margin-bottom: 54px;
+}
+
+.header__title {
+    max-width: 350px;
+    font-family: 'Yeseva One';
+    font-size: 3.25em;
+    line-height: 60px;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.header__btn {
+    width: 200px;
+    margin-bottom: 110px;
+}

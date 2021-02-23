@@ -1,0 +1,37 @@
+:root {
+    --gold-color: rgb(160, 123, 80);
+}
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.primary__btn {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .875em;
+    line-height: 1.2;
+    color: #FFFFFF;
+    padding: 18px 35px;
+    border: 1px solid var(--gold-color);
+    transition: all .3s ease-in-out;
+}
+
+.primary__btn:hover,
+.primary__btn:focus {
+    color: var(--gold-color);
+    border: 1px solid rgb(255, 255, 255);
+}
