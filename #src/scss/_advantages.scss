@@ -22,7 +22,7 @@
     border: 20px solid rgb(31, 28, 29);
 }
 
-.advantages__item :hover {
+.advantages__item:hover {
     background: var(--gold-color);
 }
 
@@ -57,5 +57,4 @@
 .advantages__item:hover .advateges__img {
     fill: rgb(255, 255, 255);
     stroke: var(--gold-color);
-    ;
 }
