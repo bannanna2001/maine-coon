@@ -1,3 +1,32 @@
 .footer {
     background-color: rgb(21, 19, 19);
 }
+
+.footer__wraper{
+    display: flex;
+    padding-top: 76px;
+    padding-bottom: 54px;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__social{
+    display: flex;
+}
+.footer__logo{
+    width: 50px;
+}
+.footer__link{
+    text-decoration: none;
+}
+.footer__link--address{
+    font-style: normal;
+    font-weight: normal;
+    font-size: .875em;
+    color: rgba(253, 242, 230, 0.83);
+}
+.footer__link--tel{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #FDF2E6;
+}

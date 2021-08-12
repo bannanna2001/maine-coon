@@ -6,3 +6,119 @@
     padding-top: 84px;
     padding-bottom: 100px;
 }
+
+.teams__desc {
+    max-width: 510px;
+    margin-bottom: 22px;
+}
+
+.teams__member-list {
+    width: 85%;
+    padding: 50px 0;
+}
+
+.teams__member {
+    position: relative;
+    display: flex;
+}
+
+.teams__slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.member__photo {
+    position: relative;
+    width: 360px;
+    height: 356px;
+    left: 50px;
+    top: -50px;
+}
+
+.member__content {
+    border: 0.5px solid rgba(160, 123, 80, 0.43);
+}
+
+.member__inner {
+    background: rgb(31, 28, 29);
+    margin: 23px 36px;
+    padding: 70px 100px;
+}
+
+.member__name {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--gold-color);
+}
+
+.member__job {
+    display: block;
+    font-size: 1rem;
+    color: var(--gold-color);
+}
+
+.member__quote {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+}
+
+.member__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.member__text {
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.member__social {
+    display: flex;
+}
+
+.teams__slider-arrow{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teams__slider-arrow{
+    padding: 0 2px;
+}
+
+.slider__button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+.slider__button:hover{
+    cursor: pointer;
+}
+
+.arrow{
+    fill: none;
+    stroke: var( --gold-color);
+    stroke-opacity: .5;
+    stroke-width: 2px;
+    transition: stroke .3s ease-in-out, stroke-opacity .3s ease-in-out;
+}
+
+.slider__button:hover .arrow{
+    stroke: white;
+    stroke-opacity: 1;
+}
+
+.social__item{
+    padding: 2px;
+}
+
+.social__item + .social__item{
+    margin-left: 8px;
+}

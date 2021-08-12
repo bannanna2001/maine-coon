@@ -1,3 +1,120 @@
 .section__faq {
     background-color: rgb(31, 28, 29);
 }
+
+.faq__wraper{
+    padding-top: 84px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+ol.faq__list{
+    counter-reset: faq-counter;
+}
+
+.faq__item{
+    padding-left: 12%;
+    position: relative;
+    counter-increment: faq-counter;
+}
+
+.faq__item::before{
+    position: absolute;
+    content: "0"counter(faq-counter);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 82px;
+    color: #A07B50;
+    left: 0;
+}
+
+.faq__item +.faq__item{
+    margin-top: 40px;
+}
+
+.faq__answer {
+    border-top: none;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.54;
+    color: #DDD0C3;
+    overflow: hidden;
+    height: 0;
+}
+
+.faq__answer--show{
+    padding: 40px 42px;
+    border-left: 1px solid rgba(160, 123, 80, 0.41);
+    border-right: 1px solid rgba(160, 123, 80, 0.41);
+    border-bottom: 1px solid rgba(160, 123, 80, 0.41);
+    height: auto;
+}
+
+.faq__answer-inner{
+    width: 75%;
+}
+.faq__answer-inner > p{
+    margin-bottom: 16px;
+}
+
+.faq__question {
+    position: relative;
+    width: 100%;
+    border: none;
+    border: 1px solid rgba(160, 123, 80, 0.41);
+    background-color: transparent;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 19px;
+    color: #DDD0C3;
+}
+
+
+
+.faq__question-text{
+    text-align: start;
+    padding: 20px 42px;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 19px;
+    color: #DDD0C3;
+    transition: background-color .3s ease-in-out;
+}
+
+.faq__question::after{
+    content: "";
+    position: absolute;
+    color: var(--gold-color);
+    width: 14%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 1px solid rgba(160, 123, 80, 0.41);
+    background-image: url("../img/plus.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.faq__active-btn::after{
+    background-color: #A07B50;
+    background-image: url("../img/minus.png");
+}
+
+.faq__active-btn::after{
+    background-color: #A07B50;
+}
+
+.faq__question:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+.faq__active-btn:hover .faq__active-btn::after,
+.faq__active-btn:focus .faq__active-btn::after {
+
+    background-color: black;
+}

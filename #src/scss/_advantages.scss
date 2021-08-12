@@ -18,12 +18,13 @@
 
 .advantages__item {
     width: 30%;
-    background: rgb(31, 28, 29);
+    background-color: rgb(31, 28, 29);
     border: 20px solid rgb(31, 28, 29);
+    transition: background-color .5s ease-in-out;
 }
 
 .advantages__item:hover {
-    background: var(--gold-color);
+    background-color: var(--gold-color);
 }
 
 .advantages__link {
@@ -47,6 +48,7 @@
     margin-bottom: 38px;
     stroke-width: 2;
     stroke: #1f1c1d;
+    transition: fill .5s ease-in-out, stroke .5s ease-in-out;
 }
 
 .advanteges--vet {

@@ -31,3 +31,37 @@ for (let i = 0; i < pets.length; i++) {
 
     });
 }
+
+let faqList = document.querySelector('.faq__list');
+let faqItems = faqList.querySelectorAll('.faq__item-wraper');
+
+for (let i = 0; i < faqItems.length; i++) {
+    let item = faqItems[i];
+
+    let btn = item.querySelector('.faq__question');
+    let content = item.querySelector('.faq__answer');
+
+    btn.addEventListener('click', () => {
+        if (btn.classList.contains('faq__active-btn')){
+            btn.classList.remove('faq__active-btn');
+            content.classList.remove('faq__answer--show')
+        } else {
+            closeAnswers(faqItems);
+            btn.classList.add('faq__active-btn');
+            content.classList.add('faq__answer--show')
+        }
+    });
+}
+
+function closeAnswers(items) {
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        let btn = item.querySelector('.faq__question');
+        let content = item.querySelector('.faq__answer');
+
+        if (btn.classList.contains('faq__active-btn')){
+            btn.classList.remove('faq__active-btn');
+            content.classList.remove('faq__answer--show')
+        }
+    }
+}
